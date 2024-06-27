@@ -4793,7 +4793,7 @@ class DotProductAttention(TransformerEngineBaseModule):
 
                 key_layer = key_layer.contiguous()
                 value_layer = value_layer.contiguous()
-
+            print("1111", key_layer.shape[-2], value_layer.shape[-2])
             assert (
                 key_layer.shape[-2] == self.num_gqa_groups_per_partition
                 and value_layer.shape[-2] == self.num_gqa_groups_per_partition
